@@ -1,35 +1,37 @@
-	 * Custom Keywords
-	 * 
-	 * Custom keywords are server-specified parsed actions that when a message is sent that matches a certain phrase, a designated task may undergo.
-	 * This is specifically useful for filtering words such as swears or other confidential information.
-	 * 
-	 * Name:
-	 *   The name of a custom keyword is short, with no spaces. Typically, you will want to name your keyword something like "no-f-word" or something of the sort.
-	 * 
-	 * Matches:
-	 *   As explained, a keyword will only trigger if it matches a specific phrase. By default, keywords are not case sensitive.
-	 *   You can simply specify some text and the keyword will trigger it. You could simply specify "f**k", and the bot will interpret it as such.
-	 *   However, if you are experienced with Regex, you can use Regex by surrounding your phrase with two slashes, like /<(.*?)>/
-	 *   If you choose to add capture groups in your Regex, they can be used as commands that will replace text with that group. (the {group #} block)
-	 *   The regex notation ignores /<regex>/<flag>. Your regex will be executed by /<regex>/g, always.
-	 * 
-	 * Action:
-	 *   The action of a keyword is essentially what will be said. Everything not surrounded by either form of brackets will be replied to in the channel.
-	 *   Blocks are denoted by brackets. Typical action blocks are denoted by {}. Statements, like an if statement, are denoted by [].
-	 *   Variables are denoted by <>. They will replace things. They have a higher priority than blocks.
-	 *   
-	 *   Here is an example of a few blocks and variables:
-	 *	   {delete} - deletes the user's message
-	 *	   {kick} - kicks the user who said the message
-	 *	   {ban} - bans said user
-	 *	   {dm you can put more stuff here that you want it to dm} -dms the user with the text specified
-	 *	   <random i could say this;or this;maybe this> - replaces the block with a random variant of those specified
-	 *	   <group 1> - replaces the block with the first capture group found in the regex, if any
-	 *	   <content> - replaces the block with the content of the message
-	 *	   <username> - replaces the block with the user's name
-	 *	   <mention> - replaces the block with the user's mention
-	 *	   
-	 * 
-	 * Example keywords:
-	 *   We could have a keyword with the name "no-f-word". It matches "f**k". Its action is "{delete}Don't say that."
-	 *   As you might have guessed, when "f**k" is said, the bot deletes the said message and responds with "Don't say that."
+* Custom Keywords
+* 
+* Custom keywords are server-specified parsed actions that when a message is sent that matches a certain phrase, a designated task may undergo.
+* This is specifically useful for filtering words such as swears or other confidential information.
+* 
+* Name:
+*   The name of a custom keyword is short, with no spaces. Typically, you will want to name your keyword something like "no-f-word" or something of the sort.
+* 
+* Matches:
+*   As explained, a keyword will only trigger if it matches a specific phrase. By default, keywords are not case sensitive.
+*   You can simply specify some text and the keyword will trigger it. You could simply specify "f**k", and the bot will interpret it as such.
+*   However, if you are experienced with Regex, you can use Regex by surrounding your phrase with two slashes, like /<(.*?)>/
+*   If you choose to add capture groups in your Regex, they can be used as commands that will replace text with that group. (the {group #} block)
+*   The regex notation ignores /<regex>/<flag>. Your regex will be executed by /<regex>/g, always.
+* 
+* Action:
+*	 UPDATE: This portion has been renamed to "BitLang." Additional documentation is included elsewhere.
+* 
+*   The action of a keyword is essentially what will be said. Everything not surrounded by either form of brackets will be replied to in the channel.
+*   Blocks are denoted by brackets. Typical action blocks are denoted by {}. Statements, like an if statement, are denoted by [].
+*   Variables are denoted by <>. They will replace things. They have a higher priority than blocks.
+*   
+*   Here is an example of a few blocks and variables:
+*	   {delete} - deletes the user's message
+*	   {kick} - kicks the user who said the message
+*	   {ban} - bans said user
+*	   {dm you can put more stuff here that you want it to dm} -dms the user with the text specified
+*	   <random i could say this;or this;maybe this> - replaces the block with a random variant of those specified
+*	   <group 1> - replaces the block with the first capture group found in the regex, if any
+*	   <content> - replaces the block with the content of the message
+*	   <username> - replaces the block with the user's name
+*	   <mention> - replaces the block with the user's mention
+*	   
+* 
+* Example keywords:
+*   We could have a keyword with the name "no-f-word". It matches "f**k". Its action is "{delete}Don't say that."
+*   As you might have guessed, when "f**k" is said, the bot deletes the said message and responds with "Don't say that."

@@ -1,1 +1,36 @@
-todo
+* BitLang
+* 
+* BitLang is a simple and easy-to-use "language" to help create custom commands and keywords within Qubit. Most administrative actions are available
+* from BitLang, so you can create robust additions for your server.
+* 
+* BitLang strings are formed very simply, through two types of blocks: variable blocks and command blocks.
+* 
+* Blocks
+*	Regardless of type, all blocks are structured the same. Typically, blocks are formatted like {command args}. The type of brace
+*	will change based on type.
+*
+* Variable blocks
+*	Variable blocks are blocks that look like <var args>. They replace parts of the BitLang string that contain useful information, such
+*	as name, mention, server name, etc.
+*
+* Command blocks
+*	Command blocks are blocks that do an action. They look like {command args}. They do not replace with anything; they merely do something. Combined with
+*	variable blocks, command blocks can be quite powerful.
+*
+* 
+* 
+* All command blocks
+*	{delete}		Deletes the sent message.
+*	{ban}			Bans the user who sent the message.
+*	{kick}			Kicks the user who sent the message.
+*	{dm <content>}	DMs the user who sent the message with the <content> provided. Example: {dm Hey dude! How's it going?}
+*	{give <role>}	Gives the user who sent the message the role specified. Example: {give Moderator}
+*	{take <role>}	Takes a role from the user who sent the message. Example: {take Moderator}
+*	
+*
+* All variable blocks
+*	<content>		The content of the sent message.
+*	<group <num>>	If regex was used to define this custom keyword, then replaces with the group value of the number specified. (advanced)
+*	<random a;b;c>	Chooses a random string between a, b, and c. Not limited to 3 arguments.
+*	<username>		The username of who sent the message.
+*	<mention>		The mention of who sent the message, or the username if a webhook triggered the command/keyword.

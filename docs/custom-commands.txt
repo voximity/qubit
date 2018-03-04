@@ -1,0 +1,10 @@
+* Custom Commands
+* 
+* Custom commands work almost exactly like custom keywords, but they trigger on a set command that users can add.
+* Both custom keywords and custom commands use a similar "language" arbitrarily named BitLang.
+* 
+* Name:
+*	The name of a custom command is short, with no spaces. It is used to trigger the command, where \<name>.
+* 
+* Action:
+*  This is what BitLang will execute. See BitLang documentation for more information on how to use BitLang.

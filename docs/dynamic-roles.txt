@@ -1,0 +1,35 @@
+* 
+* Dynamic Roles
+* 
+* Dynamic roles are server-specified roles that are given based on context. Their matchers use blocks similar to how custom keywords work.
+* You can make dynamic roles public for anyone to take, or add roles that are given conditionally when something occurs.
+* 
+* Dynamic roles take three primary arguments: an event, a condition, and a role.
+* 
+* Event:
+*	  A dynamic role event is an existing event, that when fired, will give a user the role. Some events are listed below.
+*	
+* Condition:
+*    A condition is an "if" that checks something else when the event is fired. Some conditions are listed below.
+* 
+* Role:
+*    Expectedly, this is the role that will be given out.
+*    
+* 
+* Examples:
+*    Member Role
+*	   Gives the user a Member role on join if they are not a bot.
+*      Event: join
+*      Condition: !bot
+*      Role: Member
+*    Supporter Role on Donator level 1 Role
+*     Gives the user a Supporter role when they get the Donator level 1 role.
+*      Event: get Donator level 1
+*      Condition: -
+*      Role: Supporter
+*    Red Color
+*     Allows users to take the Red role with \role get.
+*		Event: public
+*		Condition: -
+*		Role: Red
+* 
